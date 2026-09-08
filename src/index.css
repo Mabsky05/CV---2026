@@ -1,5 +1,17 @@
+@import "tailwindcss";
+
 body {
+  /* Your custom configurations go here */
+  --color-brand-primary: #1da1f2;
+  --color-brand-hover: #0d8ddc;
+  
+  --font-display: "Oswald", sans-serif;
+}
+
+/* body {
     color: white;
     background-color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold
 
-}
+} */
