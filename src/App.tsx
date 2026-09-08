@@ -1,7 +1,11 @@
+import About from './About.tsx'
 function App() {
   return (
-    <>Hello, World!</>
-
+    <>
+    Hello, World!
+    <About/>
+    </>
+  
   )
 }
 
