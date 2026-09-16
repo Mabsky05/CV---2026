@@ -3,9 +3,8 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 import About from './About.tsx'
-import Profile from './Profile.tsx'
-import Projects from './Projects.tsx'
-import CV from './CV.tsx'
+import Art from './Art.tsx'
+import Code from './Code.tsx'
 import {BrowserRouter, createBrowserRouter, RouterProvider} from "react-router-dom"
 
 // const router = createBrowserRouter ([
