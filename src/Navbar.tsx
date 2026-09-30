@@ -1,3 +1,4 @@
+import Home from './Home.tsx'
 import About from './About.tsx'
 import Art from './Art.tsx'
 import Code from './Code.tsx'
@@ -17,6 +18,7 @@ function Navbar() {
       </nav>
     </h1> 
       <Routes>
+        <Route path="/" element={<Home/>} ></Route>
         <Route path="/About" element={<About/>} ></Route>
         <Route path="/Art" element={<Art/>}></Route>
         <Route path="/Code" element={<Code/>}></Route>

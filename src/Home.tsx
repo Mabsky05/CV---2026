@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import image1 from './assets/1.jpg';
-import image2 from './assets/2.jpg';
-import image3 from './assets/3.jpg';
+import pic1 from './assets/1.jpg';
+import pic2 from './assets/2.jpg';
+import pic3 from './assets/3.jpg';
 
-const carousel = [image1, image2, image3]
+const carousel = [pic1, pic2, pic3]
 
-export function Game() {
+export function Home() {
     const [picNumber, setpicNumber] = useState(0)
 
     function picCounter(){
@@ -23,7 +23,7 @@ export function Game() {
 
 }
 
-export default Game
+export default Home
 
 // export function Game() {
 //     const [pic, setPic] = useState(false)

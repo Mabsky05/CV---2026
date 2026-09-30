@@ -4,13 +4,12 @@ import Code from './Code.tsx'
 
 import { BrowserRouter, NavLink, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './Navbar.tsx';
-import Game from './Game.tsx';
+import Game from './Home.tsx';
 
 function App() {
   return (
     <>
     {<Navbar/>}
-    {<Game/>}
     </> 
   
   )
