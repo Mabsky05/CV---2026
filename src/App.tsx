@@ -3,7 +3,7 @@ import Navbar from './Navbar.tsx';
 function App() {
   return (
     <>
-    {<Navbar/>}
+    <div className="">{<Navbar/>}</div>
     </> 
   )
 }
