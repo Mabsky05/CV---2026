@@ -15,10 +15,10 @@ function Art() {
 
 const [pic, setPic] = useState<string[]>([])
 
-const [selectedPhoto, setSelectedPhoto] = useState(null);
-const dialogRef = useRef(null);
+const [selectedPhoto, setSelectedPhoto] = useState<URL | null>(null);
+const dialogRef = useRef<HTMLDialogElement>(null);
 
-const openModal = (photoUrl) => {
+const openModal = (photoUrl: URL) => {
   setSelectedPhoto(photoUrl);
   dialogRef.current?.showModal(); // Opens native accessible modal & backdrop
   };
@@ -43,7 +43,8 @@ return (
       <div key={index}
           onClick={()=> openModal(loadPhotos)}
        className = "bg-gray-400 p-2 m-3 h-48 w-48">
-        <img className = "h-full w-full object-none" src={loadPhotos}></img></div>
+        <img className = "h-full w-full object-none" src={loadPhotos}></img>
+  </div>
     ))}
 
        <dialog
