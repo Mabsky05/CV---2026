@@ -28,7 +28,6 @@ const closeModal = () => {
   setSelectedPhoto(null);
   };
 
-
 useEffect(() => {
   function loadPhotos() {
     const selection = [...picCollection.sort(() => Math.random() - 0.5)]
@@ -38,11 +37,11 @@ useEffect(() => {
     }, [])
 
 return (
-  <div className = "h-screen flex flex-wrap shrink-0 justify-evenly content-around mt-48 bg-orange-300">
+  <div className = "h-screen flex flex-wrap shrink-0 justify-evenly content-around">
     {pic.slice(0,6).map((loadPhotos, index) => (
       <div key={index}
           onClick={()=> openModal(loadPhotos)}
-       className = "bg-gray-400 p-2 m-3 h-48 w-48">
+       className = "border-2 p-2 divide-dashed h-96 w-96">
         <img className = "h-full w-full object-none" src={loadPhotos}></img>
   </div>
     ))}
@@ -50,23 +49,23 @@ return (
        <dialog
          ref={dialogRef}
          onClose={closeModal} // Handles closing via the 'Escape' key natively
-         className="rounded-lg p-6 max-w-2xl w-full backdrop:bg-black/50 backdrop:backdrop-blur-sm"
+         className="ml-6 mt-24 h-9/10 w-full align-center backdrop:bg-black/50 backdrop:backdrop-blur-sm"
        >
          {selectedPhoto && (
-           <div className="flex flex-col items-center">
-             <div className="w-full flex justify-end mb-2">
+           <div className="flex flex-col items-center h-full p-12">
+              <img 
+               className="h-full w-auto object-contain align-center" 
+               src={selectedPhoto} 
+               alt="Enlarged view" 
+             />
+              <div className="flex">
                <button 
                  onClick={closeModal}
-                 className="text-gray-500 hover:text-gray-800 font-bold text-xl px-2"
+                 className="text-gray-500 hover:text-gray-800 font-bold text-2xl px-2"
                >
                  ✕
                </button>
              </div>
-             <img 
-               className="max-h-[70vh] w-auto object-contain rounded" 
-               src={selectedPhoto} 
-               alt="Enlarged view" 
-             />
            </div>
          )}
        </dialog>

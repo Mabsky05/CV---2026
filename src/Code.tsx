@@ -1,6 +1,6 @@
 function Code() {
   return (
-    <div>
+    <div className = "flex flex-col h-full mt-24 items-center justify-left text-5xl gap-3.5">
       <div>Previous Projects</div>
       <li><a href="https://github.com/Mabsky05/Rails---Gallery" target="blank" rel="noopener noreferrer">
       Rails Gallery</a></li>
