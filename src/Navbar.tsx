@@ -4,7 +4,7 @@ import Art from './Art.tsx'
 import Code from './Code.tsx'
 
 
-import { BrowserRouter, NavLink, Routes, Route, Link } from 'react-router-dom';
+import {NavLink, Routes, Route} from 'react-router-dom';
 
 function Navbar() {
   return (

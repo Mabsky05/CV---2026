@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react'
+import {useState, useEffect, useRef} from 'react'
 import pic4 from './assets/4.png'
 import pic5 from './assets/5.png'
 import pic6 from './assets/6.png'
@@ -18,7 +18,7 @@ const [pic, setPic] = useState<string[]>([])
 const [selectedPhoto, setSelectedPhoto] = useState<URL | null>(null);
 const dialogRef = useRef<HTMLDialogElement>(null);
 
-const openModal = (photoUrl: URL) => {
+const openModal = (photoUrl: string) => {
   setSelectedPhoto(photoUrl);
   dialogRef.current?.showModal(); // Opens native accessible modal & backdrop
   };
@@ -29,7 +29,7 @@ const closeModal = () => {
   };
 
 useEffect(() => {
-  function loadPhotos() {
+  function loadPhotos(): void {
     const selection = [...picCollection.sort(() => Math.random() - 0.5)]
     setPic(selection)
     } 
