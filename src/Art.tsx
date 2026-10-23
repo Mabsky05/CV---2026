@@ -9,16 +9,16 @@ import pic10 from './assets/10.png'
 import pic11 from './assets/11.png'
 import pic12 from './assets/12.png'
 
-const picCollection = [pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11, pic12]
+const picCollection: string[] = [pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11, pic12]
 
 function Art() {
 
 const [pic, setPic] = useState<string[]>([])
 
-const [selectedPhoto, setSelectedPhoto] = useState<URL | null>(null);
+const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
 const dialogRef = useRef<HTMLDialogElement>(null);
 
-const openModal = (photoUrl: string) => {
+const openModal = (photoUrl: string | null) => {
   setSelectedPhoto(photoUrl);
   dialogRef.current?.showModal(); // Opens native accessible modal & backdrop
   };
@@ -29,7 +29,7 @@ const closeModal = () => {
   };
 
 useEffect(() => {
-  function loadPhotos(): void {
+  function loadPhotos() {
     const selection = [...picCollection.sort(() => Math.random() - 0.5)]
     setPic(selection)
     } 
